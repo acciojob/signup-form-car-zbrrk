@@ -1,99 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup Form</title>
 </head>
-<style>
-   body{
-      font-family: sans-serif;
-   }
-   th{
-      text-align: center;
-   }
-   td {
-            border-collapse: collapse;
-        }
-</style>
 <body>
-   <table border="1">
- <tr> 
-    <th>Field</th>
-    <th>Type</th>
-    <th>Required</th>
-    <th>ID</th>
-    <th>Placeholder</th>
-  </tr>
-  <tr>
-    <td>Name</td>
-    <td>Text</td>
-    <td>Yes</td>
-    <td>name</td>
-    <td>Name</td>
-  </tr>
-  <tr> 
-    <td>Email</td>
-    <td>Email</td>
-    <td>Yes</td>
-    <td>email</td>
-    <td>Email</td>
- </tr>
- <tr> 
-    <td>Gender</td>
-    <td>Radio</td>
-    <td>Yes</td>
-    <td>gender_m, gender_f</td>
-    <td>-</td>
- </tr>
- <tr>
-    <td>Car Brands</td>
-    <td>Select</td>
-    <td>Yes</td>
-    <td>Cars</td>
-    <td>--Please choose an option--</td>
-     </tr>
 
-     <tr>
-      <td>Age</td>
-    <td>Number</td>
-    <td>Yes</td>
-    <td>age</td>
-    <td>Age</td>
-     </tr>
+  <h2>Signup Form</h2>
 
-     <tr>
-      <td>DOB</td>
-    <td>Date</td>
-    <td>Yes</td>
-    <td>dob</td>
-    <td>-</td>
-     </tr>
+  <form method="post">
+    <!-- Name -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Name" required>
+    <br><br>
 
-     <tr>
-      <td>Phone Number</td>
-    <td>Tel</td>
-    <td>No</td>
-    <td>tel</td>
-    <td>xxx-xxx-xxxx</td>
-     </tr>
+    <!-- Email -->
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Email" required>
+    <br><br>
 
-     <tr>
-      <td>Password</td>
-    <td>Password</td>
-    <td>Yes</td>
-    <td>password</td>
-    <td>Password</td>
-     </tr>
+    <!-- Gender -->
+    <label>Gender:</label>
+    <input type="radio" id="gender_m" name="gender" value="male" required>
+    <label for="gender_m">Male</label>
+    <input type="radio" id="gender_f" name="gender" value="female" required>
+    <label for="gender_f">Female</label>
+    <br><br>
 
-     <tr>
-      <td>I agree to the TOS</td>
-      <td>Checkbox</td>
-      <td>Yes</td>
-      <td>tos</td>
-      <td>-</td>
-     </tr>
+    <!-- Car Brands -->
+    <label for="cars">Car Brands:</label>
+    <select id="cars" name="cars" required>
+      <option value="">--Please choose an option--</option>
+      <option value="BMW">BMW</option>
+      <option value="Audi">Audi</option>
+      <option value="Mercedes">Mercedes</option>
+      <option value="Toyota">Toyota</option>
+    </select>
+    <br><br>
 
-</table>
+    <!-- Age -->
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" placeholder="Age" required>
+    <br><br>
+
+    <!-- DOB -->
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required>
+    <br><br>
+
+    <!-- Phone Number -->
+    <label for="tel">Phone Number:</label>
+    <input type="tel" id="tel" name="tel" placeholder="xxx-xxx-xxxx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+    <br><br>
+
+    <!-- Password -->
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Password" required>
+    <br><br>
+
+    <!-- TOS -->
+    <input type="checkbox" id="tos" name="tos" required>
+    <label for="tos">I agree to the TOS</label>
+    <br><br>
+
+    <!-- Submit Button -->
+    <button type="submit">Sign Up</button>
+  </form>
+
 </body>
 </html>
